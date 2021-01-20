@@ -1,6 +1,19 @@
 # selkov_infra
 selkov Infra repository
 
+# Lecture 6. Homework 4
+### Данные для подключения
+testapp_IP = 84.201.129.131<br/>
+testapp_port = 9292
+
+### Проверка работы
+http://84.201.129.131:9292/
+
+### Дополнительное задание
+- Скрипт создания VM с запущенным приложением [startup.sh](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/cloud-testapp/startup.sh)
+- Скрипт запускаемый при создании инстанса [metadata.yaml](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/cloud-testapp/metadata.yaml)
+<br/>
+
 # Lecture 5. Homework 3
 ## Данные для подключения
 bastion_IP = 178.154.229.7
