@@ -1,0 +1,6 @@
+{
+    "folder_id": "111",
+    "source_image_family": "ubuntu-1604-lts",
+    "image_family": "222",
+    "service_account_key_file": "333"
+  }
