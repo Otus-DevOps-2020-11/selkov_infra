@@ -1,0 +1,33 @@
+{
+    "variables": {
+    "folder_id": "",
+    "source_image_family": "ubuntu-1604-lts",
+    "image_family": "reddit-full",
+    "service_account_key_file": ""
+    },
+    "builders": [
+        {
+            "type": "yandex",
+            "folder_id": "{{ user `folder_id` }}",
+            "source_image_family": "{{ user `source_image_family` }}",
+            "image_name": "reddit-base-{{timestamp}}",
+            "image_family": "{{ user `image_family` }}",
+            "ssh_username": "ubuntu",
+            "service_account_key_file": "{{ user `service_account_key_file` }}",
+            "platform_id": "standard-v1",
+            "use_ipv4_nat": true
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "files/puma.service",
+            "destination": "/tmp/puma.service/"
+        },
+        {
+            "type": "shell",
+            "script": "files/startup_script.sh",
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}
