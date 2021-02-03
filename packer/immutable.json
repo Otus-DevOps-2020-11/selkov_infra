@@ -1,9 +1,9 @@
 {
     "variables": {
-    "folder_id": "",
-    "source_image_family": "ubuntu-1604-lts",
-    "image_family": "reddit-full",
-    "service_account_key_file": ""
+        "folder_id": "b1g5o2jbm6r7ivjhkcnc",
+        "source_image_family": "ubuntu-1604-lts",
+        "image_family": "reddit-full",
+        "service_account_key_file": "/Users/alexeiselkov/otus/keys/key.json"
     },
     "builders": [
         {
