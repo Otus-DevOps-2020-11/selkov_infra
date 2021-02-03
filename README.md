@@ -1,6 +1,33 @@
 # selkov_infra
 selkov Infra repository
 
+# Lecture 8. Homework 6
+### Данные для подключения
+testapp_IP = 84.201.133.178
+testapp_port = 80
+
+### Проверка работы
+http://84.201.133.178
+
+- Запуск VM при помощи terraform
+[main.tf](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/main.tf)
+- Выходные переменные
+[outputs.tf](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/outputs.tf)
+- Добавление провижинеров
+[puma.service](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/files/puma.service)
+[deploy.sh](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/files/deploy.sh)
+- Параметризирование конфигурационных файлов
+[variables.tf](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/variables.tf)
+- Определение переменных
+[terraform.tfvars](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/terraform.tfvars.example)
+
+### Задание с **
+- HTTP Load Balancer
+[lb.tf](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/lb.tf)
+- В terraform ресурсе задано количество инстансов через параметр ресурса count
+- Проблема в том, что созданная конфигурация - два разных приложения с двумя отдельными БД
+<br/>
+
 # Lecture 7. Homework 5
 ### Данные для подключения
 testapp_IP = 178.154.253.201<br/>
