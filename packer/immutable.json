@@ -1,9 +1,9 @@
 {
     "variables": {
-    "folder_id": "",
-    "source_image_family": "ubuntu-1604-lts",
-    "image_family": "reddit-full",
-    "service_account_key_file": ""
+        "folder_id": "",
+        "source_image_family": "",
+        "image_family": "",
+        "service_account_key_file": ""
     },
     "builders": [
         {
