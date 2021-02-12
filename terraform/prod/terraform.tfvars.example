@@ -6,4 +6,6 @@ public_key_path          = "~/.ssh/1.pub"
 private_key_path         = "~/.ssh/1"
 subnet_id                = "e9"
 service_account_key_file = "~/keys/2.json"
-count_app                = 2
+count_app                = 1
+app_disk_image           = "a1"
+db_disk_image            = "d1"

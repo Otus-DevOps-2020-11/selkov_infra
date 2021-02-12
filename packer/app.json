@@ -1,0 +1,28 @@
+{
+"variables": {
+    "folder_id": "b1g5o2jbm6r7ivjhkcnc",
+    "source_image_family": "ubuntu-1604-lts",
+    "image_family": "reddit-full",
+    "service_account_key_file": "/Users/alexeiselkov/otus/keys/key.json"
+},
+"builders": [
+    {
+        "type": "yandex",
+        "folder_id": "{{ user `folder_id` }}",
+        "source_image_family": "{{ user `source_image_family` }}",
+        "image_name": "reddit-app-{{timestamp}}",
+        "image_family": "{{ user `image_family` }}",
+        "ssh_username": "ubuntu",
+        "service_account_key_file": "{{ user `service_account_key_file` }}",
+        "platform_id": "standard-v1",
+        "use_ipv4_nat": true
+    }
+],
+"provisioners": [
+    {
+        "type": "shell",
+        "script": "scripts/install_ruby.sh",
+        "execute_command": "sudo {{.Path}}"
+    }
+]
+}
