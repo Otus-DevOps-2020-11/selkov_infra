@@ -1,6 +1,33 @@
 # selkov_infra
 selkov Infra repository
 
+# Lecture 9. Homework 7
+### Данные для подключения
+testapp_IP = 84.252.130.80<br/>
+testapp_port = 9292
+
+### Проверка работы
+http://84.252.130.80:9292
+
+### Что сделано
+- Структурированы ресурсы, app и db вынесены на отдельные инстансы.<br/>
+Создан образ app [app.json](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-2/packer/app.json).<br/>
+Создан образ db [db.json](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-2/packer/db.json).<br/>
+Созданы конфигурационные файлы для app (app.tf) и db (db.tf).<br/>
+Остальную концигурацию нашей инфраструктуры разбили по отдельным файлам.<br/>
+- Созданы модули, вся работа по созданию, настройке и деплою вынесена по отдельным модулям app [/modules/app](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-2/terraform/modules/app/) и db [/modules/db](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-2/terraform/modules/db/).
+- Создали инфраструктуру для двух окружений stage [/stage](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-2/terraform/stage/) и prod [/prod](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-2/terraform/prod/), используя созданные модули.
+
+### Задание с *
+- Настроено хранение стейт файла [terraform-prod.tfstate](https://storage.yandexcloud.net/reddit-app-states/terraform-prod.tfstate?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=I89EjR7hpjWoYGE7xm7A%2F20210212%2Fru-central1%2Fs3%2Faws4_request&X-Amz-Date=20210212T213638Z&X-Amz-Expires=604800&X-Amz-Signature=14105b73c127580c38e35dc6a8b80da40e8ddb0824e8197b8056906cdea27f3e&X-Amz-SignedHeaders=host) в удаленном бекенде.
+- Описан бекенд [backend.tf](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-2/terraform/prod/backend.tf).
+
+### Задание с **
+- Добавлены необходимые provisioner в модули для деплоя и работы приложения.
+- Сделано получение приложением адреса БД из переменной окружения DATABASE_URL с помощью templatefile.
+
+<br/>
+
 # Lecture 8. Homework 6
 ### Данные для подключения
 testapp_IP = 84.201.133.178
@@ -9,6 +36,7 @@ testapp_port = 80
 ### Проверка работы
 http://84.201.133.178
 
+### Что сделано
 - Запуск VM при помощи terraform
 [main.tf](https://github.com/Otus-DevOps-2020-11/selkov_infra/blob/terraform-1/terraform/main.tf)
 - Выходные переменные

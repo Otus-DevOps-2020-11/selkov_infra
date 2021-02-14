@@ -1,4 +1,4 @@
 #!/bin/bash
-apt update
+apt-get -y update
 sleep 15
-apt install -y ruby-full ruby-bundler build-essential
+apt-get install -y ruby-full ruby-bundler build-essential

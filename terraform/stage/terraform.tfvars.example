@@ -1,0 +1,11 @@
+cloud_id                 = "b1"
+folder_id                = "b1"
+zone                     = "ru-central1-a"
+image_id                 = "fd"
+public_key_path          = "~/.ssh/1.pub"
+private_key_path         = "~/.ssh/1"
+subnet_id                = "e9"
+service_account_key_file = "~/keys/2.json"
+count_app                = 1
+app_disk_image           = "a1"
+db_disk_image            = "d1"
